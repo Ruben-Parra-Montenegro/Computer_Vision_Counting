@@ -1,0 +1,40 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Packaging and test artifacts
+build/
+dist/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated notebook/application output
+outputs/
+results/
+runs/
+*.log
