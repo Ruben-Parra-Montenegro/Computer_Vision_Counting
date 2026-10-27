@@ -25,7 +25,7 @@ The live window shows four views of the pipeline in a 2x2 grid, with the live pa
 
 1. **Capture**: grab frames from the webcam with OpenCV
 2. **Grayscale conversion**: weighted sum of the BGR channels (NumPy)
-3. **Binary thresholding**: pixels above 125 become white, the rest black (NumPy)
+3. **Binary thresholding**: pixels above 200 become white, the rest black (NumPy)
 4. **Morphological closing and opening**: fill gaps inside parts, then remove small noise (OpenCV)
 5. **Connected component labeling**: count the white blobs larger than a minimum area (OpenCV)
 
