@@ -6,7 +6,8 @@ kernel = np.ones((2, 2), dtype=np.uint8)
 
 
 def morph_operation(binary_frame):
-    # Fill small black gaps inside batteries
+
+    # Fill small black gaps inside
     closed_img = cv2.morphologyEx(
         binary_frame,
         cv2.MORPH_CLOSE,
