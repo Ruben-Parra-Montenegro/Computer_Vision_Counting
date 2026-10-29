@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 
 
-kernel = np.ones((2, 2), dtype=np.uint8)
+kernel = np.ones((3, 3), dtype=np.uint8)
 
 
 def morph_operation(binary_frame):
