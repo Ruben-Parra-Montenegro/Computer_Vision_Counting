@@ -39,8 +39,7 @@ def dilate(binary_frame):
             window = binary_frame[i - pad_width:i + pad_width + 1,
                                   j - pad_width:j + pad_width + 1]
 
-            if np.any(window == 1):
-                out[i, j] = 1
+            out[i, j] = np.max(window)
 
     closed_img = out[pad_width:pad_width + original_height, pad_width:pad_width + original_width]
 
