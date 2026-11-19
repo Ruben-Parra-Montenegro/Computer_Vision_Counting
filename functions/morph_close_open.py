@@ -5,20 +5,22 @@ import cv2
 kernel = np.ones((3, 3), dtype=np.uint8)
 
 
-def morph_operation(binary_frame):
+def morph_operation(binary_frame, kernel_size=3):
+
+    morph_kernel = np.ones((kernel_size, kernel_size), dtype=np.uint8)
 
     # Fill small black gaps inside
     closed_img = cv2.morphologyEx(
         binary_frame,
         cv2.MORPH_CLOSE,
-        kernel
+        morph_kernel
     )
 
     # Remove small isolated white noise
     cleaned_img = cv2.morphologyEx(
         closed_img,
         cv2.MORPH_OPEN,
-        kernel
+        morph_kernel
     )
 
     return cleaned_img
@@ -61,8 +63,7 @@ def erode(binary_frame):
             window = binary_frame[i - pad_width:i + pad_width + 1,
                                   j - pad_width:j + pad_width + 1]
 
-            if np.any(window == 0):
-                out[i, j] = 0
+            out[i, j] = np.min(window)
 
     opened_img = out[pad_width:pad_width + original_height, pad_width:pad_width + original_width]
 

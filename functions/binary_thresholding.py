@@ -1,11 +1,11 @@
 import numpy as np
 
-def binary_threshold(gray_frame):
+def binary_threshold(gray_frame, threshold=200):
 
     binary_img = np.zeros(gray_frame.shape, dtype=np.uint8)
 
 
-    binary_img = (gray_frame > 200).astype(np.uint8) * 255
+    binary_img = (gray_frame > threshold).astype(np.uint8) * 255
     
     # for i in range(gray_frame.shape[0]):
     #     for j in range(gray_frame.shape[1]):

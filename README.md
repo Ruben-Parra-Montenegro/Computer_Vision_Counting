@@ -33,13 +33,18 @@ The live window shows four views of the pipeline in a 2x2 grid, with the live pa
 
 ```
 main.py                          # Entry point
+validation_and_testing.ipynb     # Experiment notebook: settings sweep on the labeled images
+EXPERIMENTS.md                   # Notes on planned experiments
 functions/
     camera_script.py             # Live camera loop and display
     gray_scale.py                # Grayscale conversion
     binary_thresholding.py       # Binary thresholding
     morph_close_open.py          # Morphological closing and opening
     counting.py                  # Connected component counting
+    separate_touching.py         # Placeholder for separating touching parts
 images/                          # Demo screenshots
+    captured_images/             # Labeled test images
+    labels.xlsx                  # True part count for each test image
 ```
 
 ## Running
@@ -52,6 +57,12 @@ python main.py
 ```
 
 Press **Q** to close the camera window.
+
+The experiment notebook needs a few more packages:
+
+```
+pip install pandas matplotlib openpyxl ipykernel
+```
 
 ## Progress
 

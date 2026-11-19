@@ -2,6 +2,8 @@ import cv2
 
 
 def count_objects(cleaned_img, min_area=300):
+    # TODO: I want to implement connected component labeling (8-connectivity)
+    # by myself instead of using cv2.connectedComponentsWithStats.
     num_labels, labels, stats, centroids = cv2.connectedComponentsWithStats(
         cleaned_img,
         connectivity=8
