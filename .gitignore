@@ -38,3 +38,7 @@ outputs/
 results/
 runs/
 *.log
+
+# Local planning notes
+EXPERIMENTS.md
+PRESENTATION.md
